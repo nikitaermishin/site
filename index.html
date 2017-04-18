@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Geolocation</title>
+</head>
+<body>
+
+  <script>
+  if ('geolocation' in navigator) {
+    var geo = navigator.geolocation;
+
+    geo.getCurrentPosition(function(pos) {
+      var lat = pos.coords.latitude;
+      var lng = pos.coords.longitude;
+      alert(`lat: ${lat} lng: ${lng}`);
+    });
+  } else {
+    document.write('Sorry, you browser can`t use geolocation :(');
+  }
+
+  </script>
+
+
+</body>
+</html>
